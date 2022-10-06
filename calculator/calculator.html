@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>calculator</title>
+<style>
+	input{
+		background: #008080;
+		color: #fff;
+		padding: 5px;
+		font-size: 15px;
+		border-radius: 5px;
+	}
+</style>
+</head>
+<body>
+<h2 style="color: yellowgreen;"><u>My Calculator</u></h2>
+<h3>1st Number</h3>
+<input type="text" id="num1">
+<br>
+<h3>2nd Number</h3>
+<input type="text" id="num2">
+<br><br>
+
+<input type="submit" value="ADD" onclick="add()">
+<input type="submit" value="SUBTRACT" onclick="subtract()">
+<input type="submit" value="MULTIPLY" onclick="multiply()">
+<input type="submit" value="DIVIDE" onclick="divide()">
+<br><br>
+<h3>Answer is:</h3>
+<p style='color:red ; font-size: 25px;' id="ans"></p>
+
+<script type="text/javascript">
+function add(){
+	var one = document.getElementById('num1').value;
+	var two = document.getElementById('num2').value;
+	var res = Number(one)+Number(two);
+	document.getElementById('ans').innerHTML = res;
+	}
+
+function subtract(){
+	var one = document.getElementById('num1').value;
+	var two = document.getElementById('num2').value;
+	var res = Number(one)-Number(two);
+	document.getElementById('ans').innerHTML = res;
+	}	
+
+function multiply(){
+	var one = document.getElementById('num1').value;
+	var two = document.getElementById('num2').value;
+	var res = Number(one)*Number(two);
+	document.getElementById('ans').innerHTML = res;
+	}	
+
+	function divide(){
+	var one = document.getElementById('num1').value;
+	var two = document.getElementById('num2').value;
+	var res = Number(one)/Number(two);
+	document.getElementById('ans').innerHTML = res;
+	}	
+	
+
+</script>
+
+
+</body>
+
+</html>
